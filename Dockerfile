@@ -5,10 +5,10 @@ FROM node:19-alpine as build
 WORKDIR /app
 
 # only copy package.json
-COPY package.json .
+COPY package.json ./
 
 # download the project dependencies
-RUN npm install
+RUN yarn install
 
 # copy everything from the react app folder to the /app folder in the container
 COPY . .
@@ -16,4 +16,4 @@ COPY . .
 ARG SERVER_URL=localhost
 
 # package up the react project in the /app directory
-RUN npm run build
+RUN yarn build
