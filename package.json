@@ -14,7 +14,7 @@
     "react-toastify": "^5.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts build",
     "test": "cross-env CI=true react-scripts test",
     "eject": "react-scripts eject"
